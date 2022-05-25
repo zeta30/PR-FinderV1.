@@ -1,4 +1,7 @@
 {
   "name": "Proxy Finder V1",
   "description": "Despliega tu propio bot Proxy Finder en su Versión 1.0",
+  "env": {
+    }
+  }
 }
