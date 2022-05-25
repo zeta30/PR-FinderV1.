@@ -92,8 +92,8 @@ def filtrar_text(update, context):
 
 # TOKEN
 if __name__ == '__main__':
-    administrador = 'AresDza'
-    bot_token = '5225993117:AAFtAwLqVQg8oJ2aBIUwxjAt9Cew0nbav_w'
+    administrador = os.environ.get('administrador')
+    bot_token = os.environ.get('bot_token')
     bot = telegram.Bot(token=bot_token)
     updater = Updater(token=bot_token, use_context=True)
 
