@@ -53,9 +53,9 @@ def filtrar_text(update, context):
                             break
                         else:
                             print ("Error...Buscando...")
-                            print (f"Buscando en el puerto: {port}")
+                            print (f"Buscando en el puerto: {str(int(port + 1))}")
                             sock.close()
-                            try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nError...Buscando...\nBuscando en el Puerto: {port}\n➖➖➖➖➖➖➖")
+                            try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nError...Buscando...\nBuscando en el Puerto: {str(int(port + 1))}\n➖➖➖➖➖➖➖")
                             except Exception as ex:bot.sendMessage(update.message.chat.id,ex)
                     try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"🛰 No Hubo Éxito Buscando Proxy!!\n\n❌ IP : {ip}\n\n❌ PUERTOS : {rango_min}-{rango_max}")
                     except Exception as ex:print(str(ex))
