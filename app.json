@@ -1,6 +1,6 @@
 {
-  "name": "Proxy Finder V1",
-  "description": "Despliega tu propio bot Proxy Finder en su Versión 1.0",
+  "name": "PR-FinderV1",
+  "description": "PR-FinderV1 Desarrollado por AresDza, Prohibida la Distribuición sin autorización de este Código",
   "env": {
     "administrador": {
       "description": "El Usuario de Telegram Q Va A Administrar El Bot",
