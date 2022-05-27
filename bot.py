@@ -78,6 +78,7 @@ def filtrar_text(update, context):
                         result = sock.connect_ex((ip,port))
 
                         if result == 0:
+                            pr_find=1
                             print ("Puerto abierto!")
                             print (f"Puerto: {port}")
                             try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nPuerto abierto!\nPuerto: {port}\n➖➖➖➖➖➖➖")
@@ -90,12 +91,16 @@ def filtrar_text(update, context):
                             except Exception as ex:bot.sendMessage(update.message.chat.id,ex)
                             break
                         else:
+                            pr_find=0
                             print ("Error...Buscando...")
                             print (f"Buscando en el puerto: {str(port)}")
                             sock.close()
                             try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nError...Buscando...\nBuscando en el Puerto: {str(port)}\n➖➖➖➖➖➖➖")
                             except Exception as ex:bot.sendMessage(update.message.chat.id,ex)
-                    try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"🛰 No Hubo Éxito Buscando Proxy!!\n\n❌ IP : {ip}\n\n❌ PUERTOS : {rango_min}-{rango_max}")
+                    try:
+                        if pr_find==0:
+                            bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"🛰 No Hubo Éxito Buscando Proxy!!\n\n❌ IP : {ip}\n\n❌ PUERTOS : {rango_min}-{rango_max}")
+                        else:pass
                     except Exception as ex:print(str(ex))
                     return
                 except:
@@ -122,6 +127,7 @@ def filtrar_text(update, context):
                         result = sock.connect_ex((str(ip),port))
 
                         if result == 0:
+                            pr_find=1
                             print ("Puerto abierto!")
                             print (f"Puerto: {port}")
                             try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nPuerto abierto!\nPuerto: {port}\n➖➖➖➖➖➖➖")
@@ -134,12 +140,16 @@ def filtrar_text(update, context):
                             except Exception as ex:bot.sendMessage(update.message.chat.id,ex)
                             break
                         else:
+                            pr_find=0
                             print ("Error...Buscando...")
                             print (f"Buscando en el puerto: {port}")
                             sock.close()
                             try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"{msg_start}\n\n➖➖➖➖➖➖➖\nError...Buscando...\nBuscando en el Puerto: {port}\n➖➖➖➖➖➖➖")
                             except Exception as ex:print(str(ex))
-                    try:bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"🛰 No Hubo Éxito Buscando Proxy!!\n\n❌ IP : {ip}\n\n❌ PUERTOS : {rango_min}-{rango_max}")
+                    try:
+                        if pr_find==0:
+                            bot.editMessageText(chat_id=update.message.chat.id,message_id=id_msg,text=f"🛰 No Hubo Éxito Buscando Proxy!!\n\n❌ IP : {ip}\n\n❌ PUERTOS : {rango_min}-{rango_max}")
+                        else:pass
                     except Exception as ex:print(str(ex))
                     return
             except: bot.sendMessage(update.message.chat.id,"ERROR")
