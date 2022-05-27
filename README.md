@@ -10,8 +10,12 @@ Actualmente en la Version V1 ...
 
 ## Comandos :
     /start - Mensaje Inicial e Información Básica
-    /search_proxy - Comando para Buscar Proxy en IP y Puertos especificados en el Código (NO ES MUY EFICAZ)
-    /search_proxy (rango_minimo-rango_max) (ip) - Comando para Buscar Proxy en IP y Puertos especificados en el comando (EFICAZ)
+    /pr_find - Comando para Buscar Proxy en IP y Puertos especificados en el Código (NO ES MUY EFICAZ)
+    /pr_find (rango_minimo-rango_max) (ip) - Comando para Buscar Proxy en IP y Puertos especificados en el comando (EFICAZ)
+## Comandos de ADMIN :    
+    /add_user - Añade autorización a un Usuario a usar el bot
+    /kick_user - Expulsa a un Usuario del bot
+    /getdb - Obtén la Base de Datos del bot
 
 # Deploy Directo (Heroku)
 [![Heroku Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AresDza/PR-FinderV1)
