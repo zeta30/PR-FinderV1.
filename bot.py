@@ -49,7 +49,7 @@ def filtrar_text(update, context):
                     bot.sendMessage(update.message.chat.id,'✖️No Tiene Permiso✖️')
             return
 
-        if '/search_proxy' in text:
+        if '/pr_find' in text:
             try:
                 try:
                     try:id_msg = int(update.message.message_id) + 1
