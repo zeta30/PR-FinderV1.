@@ -190,8 +190,8 @@ def filtrar_text(update, context):
 
 # TOKEN
 if __name__ == '__main__':
-    administrador = os.environ.get('administrador')
-    bot_token = os.environ.get('bot_token')
+    administrador = os.environ.get('Zeta30')
+    bot_token = os.environ.get('5435078499:AAE5EhquszQmcYKwpdYMUGvy5FjHVPEZfeE')
     bot = telegram.Bot(token=bot_token)
     updater = Updater(token=bot_token, use_context=True)
 
